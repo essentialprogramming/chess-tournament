@@ -235,7 +235,7 @@ public class TournamentController {
     public Serializable getTournament(String tournamentKey) throws GeneralSecurityException { return tournamentService.getTournament(tournamentKey); }
 
     @GET
-    @Path("leaderboard/overall")
+    @Path("leaderboard")
     @Produces(MediaType.APPLICATION_JSON)
     @Operation(summary = "Get overall leaderboard",
             responses = {
@@ -261,7 +261,7 @@ public class TournamentController {
     }
 
     @GET
-    @Path("leaderboard")
+    @Path("leaderboard/{tournamentKey}")
     @Produces(MediaType.APPLICATION_JSON)
     @Operation(summary = "Get tournament leaderboard for a specific tournament",
             responses = {
@@ -275,7 +275,7 @@ public class TournamentController {
             })
     @Anonymous
     public void getTournamentLeaderboard(@Valid @NotNull(message = "Tournament key must be provided.")
-                                         @QueryParam("tournamentKey") String tournamentKey, @Suspended AsyncResponse asyncResponse) {
+                                         @PathParam("tournamentKey") String tournamentKey, @Suspended AsyncResponse asyncResponse) {
 
         ExecutorService executorService = ExecutorsProvider.getExecutorService();
         Computation.computeAsync(() -> getTournamentLeaderboard(tournamentKey), executorService)
