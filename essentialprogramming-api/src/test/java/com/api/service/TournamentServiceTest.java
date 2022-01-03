@@ -612,8 +612,7 @@ public class TournamentServiceTest {
         assertThat(result.getResponse().get("message")).isEqualTo((String.format("Maximum number of participants set to %d for tournament %s",maxParticipants, tournament.getName())));
     }
 
-    //@Test
-    //TODO Fix broken unit test
+    @Test
     public void switchToNextRoundSuccessfully() {
 
         //given
@@ -627,10 +626,18 @@ public class TournamentServiceTest {
 
         for (int i = 0; i < 5; i++) {
             Match firstRoundMatch = TestEntityGenerator.generateMatch(GameState.ENDED);
+            Player firstPlayer = TestEntityGenerator.generatePlayer(false, true, true);
+            Player secondPlayer = TestEntityGenerator.generatePlayer(false, true, true);
+            firstRoundMatch.setMatchResult(TestEntityGenerator.generateMatchResult(Result.FIRST));
+            firstRoundMatch.getMatchResult().setFirstPlayer(firstPlayer);
+            firstRoundMatch.getMatchResult().setSecondPlayer(secondPlayer);
             firstRoundMatch.setTournament(tournament);
             firstRoundMatch.setRound(firstRound);
 
             Match secondRoundMatch = TestEntityGenerator.generateMatch(GameState.CREATED);
+            secondRoundMatch.setMatchResult(TestEntityGenerator.generateMatchResult(Result.FIRST));
+            secondRoundMatch.getMatchResult().setFirstPlayer(secondPlayer);
+            secondRoundMatch.getMatchResult().setSecondPlayer(firstPlayer);
             secondRoundMatch.setTournament(tournament);
             secondRoundMatch.setRound(secondRound);
 
@@ -688,8 +695,7 @@ public class TournamentServiceTest {
         verify(tournamentRepository).findByTournamentKey(tournament.getTournamentKey());
     }
 
-    //@Test
-    //TODO Fix broken unit test
+    @Test
     public void switchToNextRoundSuccessfullyFinalRound() {
 
         //given
@@ -700,6 +706,11 @@ public class TournamentServiceTest {
 
         for (int i = 0; i < 5; i++) {
             Match firstRoundMatch = TestEntityGenerator.generateMatch(GameState.ENDED);
+            Player firstPlayer = TestEntityGenerator.generatePlayer(false, true, true);
+            Player secondPlayer = TestEntityGenerator.generatePlayer(false, true, true);
+            firstRoundMatch.setMatchResult(TestEntityGenerator.generateMatchResult(Result.FIRST));
+            firstRoundMatch.getMatchResult().setFirstPlayer(firstPlayer);
+            firstRoundMatch.getMatchResult().setSecondPlayer(secondPlayer);
             firstRoundMatch.setTournament(tournament);
             firstRoundMatch.setRound(firstRound);
 
