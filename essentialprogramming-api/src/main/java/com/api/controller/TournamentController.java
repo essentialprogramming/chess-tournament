@@ -533,7 +533,7 @@ public class TournamentController {
             responses  = {
                     @ApiResponse(responseCode = "200", description = "Returns the total number of ongoing matches",
                             content = @Content(mediaType = "application/json",
-                                    schema = @Schema(implementation = Long.class))),
+                                    schema = @Schema(example = "42"))),
                     @ApiResponse(responseCode = "401", description = "Unauthorized."),
                     @ApiResponse(responseCode = "422", description = "Business error."),
                     @ApiResponse(responseCode = "500", description = "Internal server error.")
