@@ -235,7 +235,7 @@ public class TournamentController {
     public Serializable getTournament(String tournamentKey) throws GeneralSecurityException { return tournamentService.getTournament(tournamentKey); }
 
     @GET
-    @Path("leaderboard")
+    @Path("leaderboard/overall")
     @Produces(MediaType.APPLICATION_JSON)
     @Operation(summary = "Get overall leaderboard",
             responses = {
