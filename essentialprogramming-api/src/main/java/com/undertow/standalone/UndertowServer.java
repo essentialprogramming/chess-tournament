@@ -11,7 +11,6 @@ import java.util.concurrent.locks.ReentrantLock;
 
 import javax.servlet.ServletException;
 
-import com.api.controller.DemoQuizServlet;
 import com.api.controller.LoginServlet;
 import com.api.service.WebSocketManager;
 import com.authentication.config.ApplicationConfig;
@@ -91,11 +90,7 @@ public final class UndertowServer {
                         servlet("loginServlet", LoginServlet.class)
                                 .addMapping("/login/*")
                                 .setLoadOnStartup(1)
-                                .setAsyncSupported(true),
-                        servlet("quiz", DemoQuizServlet.class)
-                                .addMapping("/quiz/*")
-                                .setLoadOnStartup(1)
-
+                                .setAsyncSupported(true)
                 );
 
         final DeploymentManager manager = defaultContainer().addDeployment(servletBuilder);

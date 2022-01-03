@@ -261,7 +261,7 @@ public class TournamentController {
     }
 
     @GET
-    @Path("leaderboard/{tournamentKey}")
+    @Path("leaderboard")
     @Produces(MediaType.APPLICATION_JSON)
     @Operation(summary = "Get tournament leaderboard for a specific tournament",
             responses = {
