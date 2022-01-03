@@ -275,7 +275,7 @@ public class TournamentController {
             })
     @Anonymous
     public void getTournamentLeaderboard(@Valid @NotNull(message = "Tournament key must be provided.")
-                                         @QueryParam("tournamentKey") String tournamentKey, @Suspended AsyncResponse asyncResponse) {
+                                         @PathParam("tournamentKey") String tournamentKey, @Suspended AsyncResponse asyncResponse) {
 
         ExecutorService executorService = ExecutorsProvider.getExecutorService();
         Computation.computeAsync(() -> getTournamentLeaderboard(tournamentKey), executorService)
@@ -533,7 +533,7 @@ public class TournamentController {
             responses  = {
                     @ApiResponse(responseCode = "200", description = "Returns the total number of ongoing matches",
                             content = @Content(mediaType = "application/json",
-                                    schema = @Schema(implementation = Long.class))),
+                                    schema = @Schema(example = "42"))),
                     @ApiResponse(responseCode = "401", description = "Unauthorized."),
                     @ApiResponse(responseCode = "422", description = "Business error."),
                     @ApiResponse(responseCode = "500", description = "Internal server error.")
