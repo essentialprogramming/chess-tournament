@@ -1,0 +1,13 @@
+--Add tournament id to unique constraint
+
+DROP PROCEDURE IF EXISTS ADD_TOURNAMENT_ID_TO_MATCH_PLAYER_UNIQUE_CONSTRAINT;
+CREATE PROCEDURE ADD_TOURNAMENT_ID_TO_MATCH_PLAYER_UNIQUE_CONSTRAINT()
+    language plpgsql
+as $$
+BEGIN
+ALTER TABLE match_player
+    DROP CONSTRAINT match_player_first_player_id_second_player_id_key,
+    ADD UNIQUE (first_player_id, second_player_id, tournament_id);
+END $$;
+CALL ADD_TOURNAMENT_ID_TO_MATCH_PLAYER_UNIQUE_CONSTRAINT();
+DROP PROCEDURE ADD_TOURNAMENT_ID_TO_MATCH_PLAYER_UNIQUE_CONSTRAINT;

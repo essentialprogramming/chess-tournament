@@ -1,0 +1,12 @@
+-- Add tournament key in tournament table
+
+DROP PROCEDURE IF EXISTS ADD_TOURNAMENT_KEY;
+CREATE PROCEDURE ADD_TOURNAMENT_KEY()
+language plpgsql
+as $$
+BEGIN
+  ALTER TABLE tournament
+  ADD COLUMN tournament_key VARCHAR(300);
+END $$;
+CALL ADD_TOURNAMENT_KEY();
+DROP PROCEDURE ADD_TOURNAMENT_KEY;
