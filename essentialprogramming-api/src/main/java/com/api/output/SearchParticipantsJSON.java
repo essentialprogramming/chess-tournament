@@ -1,6 +1,5 @@
 package com.api.output;
 
-import com.api.model.InvitationStatus;
 import lombok.*;
 
 @Builder

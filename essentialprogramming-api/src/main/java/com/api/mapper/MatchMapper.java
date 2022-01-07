@@ -2,17 +2,12 @@ package com.api.mapper;
 
 import com.api.entities.Match;
 import com.api.entities.MatchResult;
-import com.api.entities.Tournament;
-import com.api.env.resources.AppResources;
 import com.api.model.Result;
 import com.api.output.MatchJSON;
 import com.api.output.SearchMatchesJSON;
-import com.api.output.SearchTournamentsJSON;
-import com.crypto.Crypt;
 import com.util.date.DateUtil;
 import lombok.SneakyThrows;
 
-import java.util.Objects;
 import java.util.Optional;
 
 public class MatchMapper {

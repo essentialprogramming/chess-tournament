@@ -1,6 +1,5 @@
 package com.api.entities;
 
-import com.api.mapper.ScheduleMapper;
 import com.api.model.GameState;
 import lombok.*;
 

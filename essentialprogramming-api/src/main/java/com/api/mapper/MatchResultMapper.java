@@ -1,8 +1,6 @@
 package com.api.mapper;
 
-import com.api.entities.Match;
 import com.api.entities.MatchResult;
-import com.api.output.MatchJSON;
 import com.api.output.MatchResultJSON;
 
 public class MatchResultMapper {

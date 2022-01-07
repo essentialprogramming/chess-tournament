@@ -1,18 +1,15 @@
 package com.api.service;
 
 import com.api.entities.Player;
-import com.api.entities.Tournament;
 import com.api.entities.TournamentUser;
 import com.api.entities.TournamentUserKey;
 import com.api.model.Result;
 import com.api.repository.PlayerRepository;
-import com.api.repository.TournamentRepository;
 import com.api.repository.TournamentUserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.HttpClientErrorException;
 
 @Service

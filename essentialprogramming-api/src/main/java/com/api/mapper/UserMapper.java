@@ -1,12 +1,8 @@
 package com.api.mapper;
 
-import com.api.entities.Player;
 import com.api.entities.User;
 import com.api.model.UserInput;
 import com.api.output.UserJSON;
-
-import java.util.List;
-
 
 public class UserMapper {
 

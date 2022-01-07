@@ -1,7 +1,5 @@
 package com.api.output;
 
-import com.api.entities.MatchResult;
-import com.api.entities.User;
 import lombok.*;
 
 import java.io.Serializable;

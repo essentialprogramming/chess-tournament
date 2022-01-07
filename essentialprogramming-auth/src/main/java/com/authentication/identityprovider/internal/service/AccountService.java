@@ -25,7 +25,6 @@ import java.io.Serializable;
 import java.security.GeneralSecurityException;
 import java.util.*;
 
-
 @Service
 public class AccountService implements AuthenticationProvider {
 

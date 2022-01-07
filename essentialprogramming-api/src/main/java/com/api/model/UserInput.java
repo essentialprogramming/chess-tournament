@@ -1,13 +1,11 @@
 package com.api.model;
 
-
 import com.api.model.constraint.FieldMatch;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 import javax.validation.constraints.*;
-
 
 @Builder
 @Getter

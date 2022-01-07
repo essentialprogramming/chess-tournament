@@ -1,11 +1,9 @@
 package com.authentication.identityprovider.internal.entities;
 
-
 import lombok.*;
 import javax.persistence.*;
 import java.util.List;
 import java.util.Optional;
-
 
 @Builder
 @Getter

@@ -1,7 +1,6 @@
 package com.api.repository;
 
 import com.api.entities.Match;
-import com.api.entities.Player;
 import com.api.entities.Tournament;
 import com.api.entities.User;
 import com.api.model.GameState;
