@@ -1,10 +1,8 @@
 package com.api.model;
+
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
-
 import javax.validation.constraints.Pattern;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 @Builder
 @Setter

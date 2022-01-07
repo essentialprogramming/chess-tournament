@@ -1,6 +1,5 @@
 package com.api.repository;
 
-import com.api.entities.Player;
 import com.api.entities.Round;
 import com.api.entities.Tournament;
 import org.springframework.data.jpa.repository.JpaRepository;

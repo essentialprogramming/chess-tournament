@@ -1,6 +1,5 @@
 package com.authentication.config;
 
-
 import com.authentication.controller.AuthenticationController;
 import com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider;
 import com.util.enums.Language;

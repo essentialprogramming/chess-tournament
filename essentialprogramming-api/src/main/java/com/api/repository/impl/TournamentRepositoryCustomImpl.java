@@ -2,7 +2,6 @@ package com.api.repository.impl;
 
 import com.api.entities.*;
 import com.api.entities.TournamentUser;
-import com.api.entities.User;
 import com.api.model.GameState;
 import com.api.model.TournamentSearchCriteria;
 import com.api.output.SearchTournamentsJSON;

@@ -1,11 +1,7 @@
 package com.api.mapper;
 
 import com.api.entities.Tournament;
-import com.api.env.resources.AppResources;
 import com.api.output.ChessTournamentJSON;
-import com.api.output.MatchResultJSON;
-import com.api.output.RoundJSON;
-import com.crypto.Crypt;
 import lombok.SneakyThrows;
 
 import java.util.concurrent.atomic.AtomicInteger;

@@ -1,4 +1,5 @@
 package com.api.model;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 

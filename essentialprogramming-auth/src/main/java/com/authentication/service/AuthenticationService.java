@@ -1,6 +1,5 @@
 package com.authentication.service;
 
-
 import com.authentication.channel.AccessChannel;
 import com.authentication.oauth2.PrivateClaims;
 import com.authentication.identityprovider.AuthenticationProvider;

@@ -1,6 +1,5 @@
 package com.crypto;
 
-
 import javax.crypto.Cipher;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;

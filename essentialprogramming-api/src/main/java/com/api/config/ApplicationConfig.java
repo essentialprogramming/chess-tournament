@@ -1,6 +1,5 @@
 package com.api.config;
 
-
 import com.api.controller.*;
 import com.exception.BeanValidationExceptionHandler;
 import com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider;

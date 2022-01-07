@@ -1,6 +1,5 @@
 package com.authentication.identityprovider;
 
-
 import com.authentication.identityprovider.internal.entities.Account;
 import com.authentication.identityprovider.internal.model.PasswordInput;
 import com.authentication.identityprovider.internal.model.ResetPasswordInput;
